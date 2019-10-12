@@ -14,7 +14,7 @@ import java.net.Socket;
 public class ClientDemo {
 
     public static void main(String[] args) throws IOException {
-        Socket s = new Socket("127.0.0.1", 10001);
+        Socket s = new Socket("guodudev.imwork.net", 8972);
         OutputStream os = s.getOutputStream();
         String id = "123456";
         int length = id.length();
@@ -25,7 +25,7 @@ public class ClientDemo {
         byte[] bytes = Tools.byteMerger(idBytesbytes, lengthBytes);
         log.info("合并结果为->{}",Tools.byteToString(bytes));
 
-        os.write("tcp发送数据".getBytes());
+        os.write();
         //接收服务器反馈
         InputStream is = s.getInputStream();
         byte[] bys = new byte[1024];
