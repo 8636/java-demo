@@ -24,8 +24,6 @@ public class ClientDemo {
         log.info("内容长度为->{}",Tools.byteToString(lengthBytes));
         byte[] bytes = Tools.byteMerger(idBytesbytes, lengthBytes);
         log.info("合并结果为->{}",Tools.byteToString(bytes));
-
-        os.write();
         //接收服务器反馈
         InputStream is = s.getInputStream();
         byte[] bys = new byte[1024];
