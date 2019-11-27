@@ -8,6 +8,9 @@
       <list>
         <option value="$PROJECT_DIR$/demo/pom.xml" />
         <option value="$PROJECT_DIR$/java8/pom.xml" />
+        <option value="$PROJECT_DIR$/socket/pom.xml" />
+        <option value="$PROJECT_DIR$/web-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,0 +1,51 @@
+server:
+  port: 8081
+
+spring:
+  redis:
+    database: 0
+    host: guodudev.imwork.net
+    port: 8324
+    password: Zzll390Tkkac4
+    # 连接超时时间（毫秒）
+    timeout: 10000
+    lettuce:
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制） 默认 8
+        max-active: 100
+        # 连接池中的最大空闲连接 默认 8
+        max-idle: 10
+        # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认 -1
+        max-wait: 10000
+        # 连接池中的最小空闲连接 默认 0
+        min-idle: 0
+  output:
+    ansi:
+      enabled: detect
+
+langxin:
+  operatorid: MA444JJP7
+  operatorsecret: 6xD1eTNbd1JBi1hx
+  datasecret: LID916tAQU3EMgja
+  datasecretiv: Ep7oORvGsQQa3inM
+  sigsecret: R7wMBDHmIH2Qmo4u
+  url: http://47.92.42.100:18080/icn/evcs/v1.1/
+tenglong:
+  operatorid: 712650060
+  operatorsecret: 1LYNZqnlMFer2zCc
+  datasecret: CYOCHiYjr2AI3imU
+  datasecretiv: uy0qmbFgyxfFwS1n
+  sigsecret: uLOhapzfDnZbp64U
+  url: http://guodudev.imwork.net:8191/
+
+userproxy:
+  ip: 47.92.42.100
+  port: 8972
+
+logging:
+  config: logback.xml
+
+#socket服务器
+socketserver:
+  ip: guodudev.imwork.net
+  port: 8972

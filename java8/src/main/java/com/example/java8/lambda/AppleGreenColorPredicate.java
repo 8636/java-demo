@@ -9,11 +9,10 @@ public class AppleGreenColorPredicate implements ApplePredicate {
 
     /**
      * 筛选出 绿色的苹果
-     * @param apple
      * @return
      */
     @Override
-    public boolean test(Apple apple) {
-        return "green".equals(apple.getColor());
+    public boolean test(Object o) {
+        return false;
     }
 }

@@ -22,6 +22,8 @@ public class MyTest {
         });
 
 
+
+
     }
 
     public static void useEatable(Eatable eatable){

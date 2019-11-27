@@ -6,8 +6,9 @@ package com.example.java8.lambda;
  * @date 2019/11/18 14:20
  */
 public class AppleHeavyWeightPredicate implements ApplePredicate {
+
     @Override
-    public boolean test(Apple apple) {
-        return apple.getWeight() > 150;
+    public boolean test(Object o) {
+        return false;
     }
 }
