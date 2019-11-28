@@ -1,6 +1,5 @@
 package com.example.rabbitmq;
 
-import com.example.rabbitmq.producer.Producer;
 import com.rabbitmq.client.*;
 
 import java.io.IOException;
