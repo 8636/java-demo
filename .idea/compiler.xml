@@ -6,23 +6,27 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="rabbitmq" />
         <module name="socket" />
-        <module name="web-demo" />
         <module name="demo" />
         <module name="java8" />
+        <module name="alipaydemo" />
+        <module name="rabbitmq" />
+        <module name="web-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="alipaydemo" target="1.8" />
       <module name="demo" target="1.8" />
       <module name="java8" target="1.8" />
       <module name="rabbitmq" target="1.8" />
       <module name="socket" target="1.8" />
+      <module name="thread" target="1.8" />
       <module name="web-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="alipaydemo" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="java8" options="-parameters" />
       <module name="rabbitmq" options="-parameters" />

@@ -27,7 +27,7 @@ public class Consumer1 {
         channel.basicQos(1);
 
         //创建消费者；并设置消息处理
-        DefaultConsumer consumer = new DefaultConsumer(channel){
+        DefaultConsumer consumer = new DefaultConsumer(channel) {
             @Override
             /**
              * consumerTag 消息者标签，在channel.basicConsume时候可以指定

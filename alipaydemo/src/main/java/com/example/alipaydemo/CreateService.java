@@ -1,3 +1,5 @@
+package com.example.alipaydemo;
+
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
 import com.alipay.api.DefaultAlipayClient;
@@ -9,21 +11,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-/*
-<dependency>
-	<groupId>com.alibaba</groupId>
-	<artifactId>fastjson</artifactId>
-	<version>1.2.50</version>
-</dependency>
-<dependency>
-	<groupId>com.alipay.sdk</groupId>
-	<artifactId>alipay-sdk-java</artifactId>
-	<version>3.3.49.ALL</version>
-</dependency>
-*/
 public class CreateService {
     private static final Logger   logger = LoggerFactory.getLogger(CreateService.class);
-
     public Object alipayTradeCreateService(){
 	AlipayTradeCreateRequest alipayRequest = new AlipayTradeCreateRequest();
 	//请确认是否在工程中引入了fastjson

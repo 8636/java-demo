@@ -11,7 +11,7 @@ import java.util.concurrent.TimeoutException;
  * @version 1.0
  * @date 2019/11/29 9:28
  */
-public class Consumer1 {
+public class Consumer2 {
     public static void main(String[] args) throws IOException, TimeoutException {
         Connection connection = ConnectionUtil.getConnection();
 
@@ -25,11 +25,11 @@ public class Consumer1 {
          * 参数4：是否在不使用的时候自动删除队列
          * 参数5：队列其它参数
          */
-        channel.queueDeclare(Producer.FANOUT_QUEUE_1, true, false, false, null);
+        channel.queueDeclare(Producer.FANOUT_QUEUE_2, true, false, false, null);
         //队列绑定交换机
-        channel.queueBind(Producer.FANOUT_QUEUE_1, Producer.FANOUT_EXCHAGE, "");
+        channel.queueBind(Producer.FANOUT_QUEUE_2, Producer.FANOUT_EXCHAGE, "");
 
-        DefaultConsumer consumer = new DefaultConsumer(channel){
+        DefaultConsumer consumer = new DefaultConsumer(channel) {
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
                 System.out.println("ConsumerTag" + consumerTag);
@@ -49,6 +49,6 @@ public class Consumer1 {
          * 参数2：是否自动确认，设置为true为表示消息接收到自动向mq回复接收到了，mq接收到回复会删除消息，设置为false则需要手动确认
          * 参数3：消息接收到后回调
          */
-        channel.basicConsume(Producer.FANOUT_QUEUE_1, true, consumer);
+        channel.basicConsume(Producer.FANOUT_QUEUE_2, true, consumer);
     }
 }

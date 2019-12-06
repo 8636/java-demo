@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/socket/pom.xml" />
         <option value="$PROJECT_DIR$/web-demo/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/alipaydemo/pom.xml" />
       </list>
     </option>
   </component>

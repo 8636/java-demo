@@ -11,6 +11,9 @@ public class DemoApplicationTests {
 
     @Test
     public void contextLoads() {
+        String s = "-";
+        String[] split = s.split("-");
+        System.out.println(split);
     }
 
 }
