@@ -3,7 +3,7 @@ package threadPool;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/**
+/**   自动创建线程池
  * @author duan
  * @version 1.0
  * @date 2019/12/6 16:38
