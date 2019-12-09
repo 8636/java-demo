@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /** 手动创建 线程池
  * 任务拒绝策略
- *  1、AbortPolicy    直接拒绝 并抛出异常
+ *  1、AbortPolicy    丢弃任务并抛出RejectedExecutionException异常。是默认的策略。
  *  2、DiscardPolicy  直接拒绝 不抛出异常
  *  3、DiscardOldestPolicy 移除任务队列中的等待时间最久的任务，讲新任务加入任务队列
  *  4、CallerRunsPolicy  直接绕过线程池  调用run方法，利用的main线程
