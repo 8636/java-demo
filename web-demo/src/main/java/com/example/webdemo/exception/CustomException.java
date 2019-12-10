@@ -4,6 +4,9 @@ package com.example.webdemo.exception;
 import com.example.webdemo.enums.StatusEnums;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
  * @author duan
@@ -12,6 +15,8 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
+
 public class CustomException extends Exception {
     private String message;
 

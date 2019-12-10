@@ -6,7 +6,11 @@ import com.example.webdemo.utils.JsonUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /** 统一异常处理类
  * @author duan
@@ -39,5 +43,13 @@ public class RequestExceptionHandler {
             responseCode = new ResponseDTO("1", exception.getMessage());
         }
         JsonUtils.responseJson(responseCode);
+    }
+
+    @ModelAttribute(name = "md")
+    public Map<String,Object> mydata() {
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("age", 99);
+        map.put("gender", "男");
+        return map;
     }
 }
