@@ -13,7 +13,7 @@ public class Client {
         for (int i = 0; i < 10; i++) {
             SocketChannel socketChannel = SocketChannel.open();
             socketChannel.configureBlocking(false);
-            InetSocketAddress inetSocketAddress = new InetSocketAddress("127.0.0.1", 9999);
+            InetSocketAddress inetSocketAddress = new InetSocketAddress("127.0.0.1", 10000);
             if (!socketChannel.connect(inetSocketAddress)) {
                 while (!socketChannel.finishConnect()) {
                     System.out.println("未完成连接。。");
@@ -23,7 +23,7 @@ public class Client {
             String str = "hello server" + i;
             ByteBuffer wrap = ByteBuffer.wrap(str.getBytes());
             socketChannel.write(wrap);
-            Thread.sleep(2000);
+            Thread.sleep(10000);
         }
 
     }
