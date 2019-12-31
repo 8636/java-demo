@@ -1,6 +1,7 @@
 package array.demo;
 
 import java.time.LocalDateTime;
+import java.util.Comparator;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -10,9 +11,8 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class TestNewDateApi {
     public static void main(String[] args) {
-        Thread thread = Thread.currentThread();
-        LocalDateTime now = LocalDateTime.now();
-        System.out.println(now);
-        ReentrantLock lock = new ReentrantLock();
+        Comparator<String> caseInsensitiveOrder = String.CASE_INSENSITIVE_ORDER;
+        String format = String.format("无法找到%s服务", "hello");
+        System.out.println(format);
     }
 }

@@ -25,7 +25,12 @@ public class Server {
         // 等待客户端连接
         for (; ; ) {
             // 得到客户端
+            System.out.println("start......");
+            //accept方法是阻塞的
+            //Listens for a connection to be made to this socket and accepts it.
+            //The method blocks until a connection is made
             Socket client = server.accept();
+            System.out.println(client);
             // 客户端构建异步线程
             ClientHandler clientHandler = new ClientHandler(client);
             // 启动线程

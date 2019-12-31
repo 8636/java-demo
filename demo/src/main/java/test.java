@@ -13,14 +13,9 @@ import java.util.TreeSet;
  */
 public class test {
     public static void main(String[] args) throws ParseException {
-        String str1 = "00:00";
-        int m = 0;
-
-        m =  Integer.valueOf(String.valueOf(str1.charAt(1)));
-        System.out.println(m);
-        NumberFormat numberFormat = NumberFormat.getInstance();
-        numberFormat.setMaximumFractionDigits(0);
-        String result = numberFormat.format((float) 5 / (float) 24 * 100);
+        double b = 10.009999;
+        Integer fen = MoneyUtil.Yuan2Fen(b);
+        System.out.println(fen);
     }
 
       /*  HashSet<Object> objects1 = new HashSet<>();

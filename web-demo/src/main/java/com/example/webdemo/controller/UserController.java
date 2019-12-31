@@ -1,17 +1,10 @@
 package com.example.webdemo.controller;
 
-import com.example.webdemo.exception.RedisConnException;
 import com.example.webdemo.service.UserService;
-import com.example.webdemo.utils.RedisUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
-
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletResponse;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author duan
@@ -30,6 +23,47 @@ public class UserController {
 //        System.out.println("111");
 //        return "111";
 //    }
+
+    @RequestMapping(value = "/hello",method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity test(){
+        return ResponseEntity.ok("hello");
+
+    }
+
+    @PostMapping("/post")
+    @ResponseBody
+    public void post(){
+        System.out.println("post");
+    }
+
+    @GetMapping("/get")
+    @ResponseBody
+    public void get(){
+        System.out.println("get");
+    }
+
+    @PutMapping("/put")
+    @ResponseBody
+    public void put(){
+        System.out.println("put");
+    }
+
+
+    @DeleteMapping("/delete")
+    @ResponseBody
+    public void delete(){
+        System.out.println("delete");
+    }
+
+
+    @GetMapping("/getView")
+    public String getView(){
+        return "hello";
+    }
+
+
+
 
 
 }

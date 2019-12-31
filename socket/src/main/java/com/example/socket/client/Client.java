@@ -15,7 +15,6 @@ public class Client {
         System.out.println("已发起服务器连接，并进入后续流程～");
         System.out.println("客户端信息：" + socket.getLocalAddress() + " P:" + socket.getLocalPort());
         System.out.println("服务器信息：" + socket.getInetAddress() + " P:" + socket.getPort());
-
         try {
             // 发送接收数据
             todo(socket);
@@ -49,8 +48,6 @@ public class Client {
             String str = input.readLine();
             // 发送到服务器
             socketPrintStream.println(str);
-
-
             // 从服务器读取一行
             String echo = socketBufferedReader.readLine();
             if ("bye".equalsIgnoreCase(echo)) {

@@ -3,12 +3,17 @@ package JSON;
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.ToString;
 
+/**
+ * Created by duan on 2019/12/19 14:14
+ */
 @Data
 @AllArgsConstructor
-public class User {
-    @JSONField(name = "UserName")
+@ToString
+public class UserDemo {
+
     private String userName;
-    @JSONField(name = "PassWord")
     private String passWord;
+
 }

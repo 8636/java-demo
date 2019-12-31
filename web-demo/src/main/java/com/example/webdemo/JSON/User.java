@@ -1,4 +1,4 @@
-package JSON;
+package com.example.webdemo.JSON;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.AllArgsConstructor;
