@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author duan
@@ -18,12 +19,13 @@ import java.util.List;
 public class StreamDemo {
     public static void main(String[] args) throws JsonProcessingException {
         ArrayList<Apple> apples = new ArrayList<>();
-        Apple apple = new Apple("red", "hfs", 160);
-        Apple apple1 = new Apple("green", "hn", 120);
-        Apple apple2 = new Apple("green", "hfs", 155);
-        List<Apple> appleList = Arrays.asList(apple, apple1, apple2);
+        Apple apple1 = new Apple("red", "hfs", 160);
+        Apple apple2 = new Apple("green", "hn", 120);
+        Apple apple3 = new Apple("green", "hfs", 155);
+        List<Apple> appleList = Arrays.asList(apple3, apple1, apple2);
 //        List<Apple> apples1 = filterGreenApple(apples);
-        List<Apple> apples1 = filterByPredicate(appleList, (Apple apple3) -> "red".equals(apple3.getColor()));
+        List<Apple> apples1 = filterByPredicate(appleList,
+                (Apple apple) -> "red".equals(apple.getColor())|| apple.getWeight() >120);
         ObjectMapper objectMapper = new ObjectMapper();
         String s = objectMapper.writeValueAsString(apples1);
         System.out.println(s);
@@ -47,17 +49,13 @@ public class StreamDemo {
      * <T extends FatherClass>
      *
      * @param list
-     * @param ap
+     * @param p
      * @param <T>
      * @return
      */
-    private static <T> List<T> filterByPredicate(List<T> list, ApplePredicate<T> ap) {
-        List<T> apples = new ArrayList<T>();
-        for (T e : list) {
-            if (ap.test(e)) {
-                apples.add(e);
-            }
-        }
-        return apples;
+    private static <T> List<T> filterByPredicate(List<T> list, ApplePredicate<T> p) {
+        List<T> result;
+        result = list.stream().filter( t -> p.test(t)).collect(Collectors.toList());
+        return result;
     }
 }
