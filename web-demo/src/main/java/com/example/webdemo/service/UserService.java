@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
  * @version 1.0
  * @date 2019/11/27 9:26
  */
-@Service
 public interface UserService {
     String print();
     String hello();

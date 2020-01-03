@@ -2,9 +2,12 @@ package com.example.webdemo.controller;
 
 import com.example.webdemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
 
 /**
  * @author duan
@@ -14,7 +17,9 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class UserController {
 
-    @Autowired
+//    @Autowired
+//    @Qualifier("mysql")
+    @Resource(name = "mysql")
     UserService userService;
 
 //    @GetMapping("/hello")
@@ -27,6 +32,7 @@ public class UserController {
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     @ResponseBody
     public ResponseEntity test(){
+        userService.hello();
         return ResponseEntity.ok("hello");
 
     }

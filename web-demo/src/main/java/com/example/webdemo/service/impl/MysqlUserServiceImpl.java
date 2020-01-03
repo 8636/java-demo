@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
  * @version 1.0
  * @date 2019/11/27 9:27
  */
-
+@Service("mysql")
 public class MysqlUserServiceImpl implements UserService {
     @Override
     public String print() {

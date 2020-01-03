@@ -25,7 +25,6 @@ public class Client {
             System.out.println(new String(buffer.array(), 0, len));
             buffer.clear();
         }
-        Thread.sleep(10000);
         socketChannel.close();
     }
 }
