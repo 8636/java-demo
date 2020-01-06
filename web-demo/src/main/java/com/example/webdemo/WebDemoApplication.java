@@ -17,8 +17,6 @@ public class WebDemoApplication {
         SpringApplication.run(WebDemoApplication.class, args);
     }
 
-
-
     @Bean
     public TaskScheduler taskScheduler(){
         ThreadPoolTaskScheduler taskScheduler = new ThreadPoolTaskScheduler();
