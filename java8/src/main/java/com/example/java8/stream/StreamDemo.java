@@ -2,7 +2,6 @@ package com.example.java8.stream;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toList;
 
@@ -11,11 +10,6 @@ import static java.util.stream.Collectors.toList;
  */
 public class StreamDemo {
     public static void main(String[] args) {
-//        List<String> list = Arrays.asList("1299999", "126", "12222","3","");
-//        List<String> integers = list.stream().filter(s -> s.length() > 1)
-//                .sorted((s1,s2)->s2.length() - s1.length())
-//                .collect(Collectors.toList());
-//        System.out.println("----");
 
         List<Dish> menu = Arrays.asList(
                 new Dish("pork", false, 800, Dish.Type.MEAT),
@@ -26,7 +20,7 @@ public class StreamDemo {
                 new Dish("season fruit", true, 120, Dish.Type.OTHER),
                 new Dish("pizza", true, 550, Dish.Type.OTHER),
                 new Dish("prawns", false, 300, Dish.Type.FISH),
-                new Dish("salmon", false, 450, Dish.Type.FISH) );
+                new Dish("salmon", false, 450, Dish.Type.FISH));
 
 
         // filter map limit 等操作返回的是stream  在collect之前没有结果产生
@@ -40,7 +34,6 @@ public class StreamDemo {
                 //将流转换为其他形式
                 .collect(toList());
         System.out.println(threeHighCaloricDishNames);
-
 
 
         List<String> words = Arrays.asList("Java8", "Lambdas", "In", "Action");

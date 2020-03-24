@@ -1,3 +1,4 @@
+import java.io.File;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -13,9 +14,14 @@ import java.util.TreeSet;
  */
 public class test {
     public static void main(String[] args) throws ParseException {
-        double b = 10.009999;
-        Integer fen = MoneyUtil.Yuan2Fen(b);
-        System.out.println(fen);
+        String pathPrefix = "src/main/resources/static";
+        String relativePath = pathPrefix + "/" + "2" +"/" + "3";
+        //存放上传文件的文件夹
+        File file = new File(relativePath);
+        if (!file.isDirectory()) {
+            //递归生成文件夹
+            file.mkdirs();
+        }
     }
 
       /*  HashSet<Object> objects1 = new HashSet<>();

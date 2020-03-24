@@ -9,6 +9,7 @@
         <module name="socket" />
         <module name="demo" />
         <module name="java8" />
+        <module name="springboot" />
         <module name="alipaydemo" />
         <module name="rabbitmq" />
         <module name="web-demo" />
@@ -20,6 +21,7 @@
       <module name="java8" target="1.8" />
       <module name="rabbitmq" target="1.8" />
       <module name="socket" target="1.8" />
+      <module name="springboot" target="1.8" />
       <module name="thread" target="1.8" />
       <module name="web-demo" target="1.8" />
     </bytecodeTargetLevel>

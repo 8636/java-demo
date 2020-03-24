@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 /**
  * Created by duan on 2020/1/3 14:27
  */
-@Component
+//@Component
 public class TestSchedule {
     @Scheduled(cron = "0/3 * * * * ?")
     public void task01() {

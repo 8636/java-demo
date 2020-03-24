@@ -1,16 +1,21 @@
 #https端口号.
 server:
   port: 8082
-  ssl:
-    #证书的路径.
-    key-store: classpath:keystore.p12
-    #证书密码
-    key-store-password: 123456
-    #秘钥库类型
-    key-store-type: PKCS12
-    #证书别名
-    key-alias: tomcat
+
+#  ssl:
+#    #证书的路径.
+#    key-store: classpath:keystore.p12
+#    #证书密码
+#    key-store-password: 123456
+#    #秘钥库类型
+#    key-store-type: PKCS12
+#    #证书别名
+#    key-alias: tomcat
 spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
   redis:
     # Redis数据库索引（默认为0）
     database: 0
